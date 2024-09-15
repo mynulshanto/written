@@ -1,0 +1,97 @@
+
+import java.util.Scanner;  class Student {  
+String college, name, dept;  int roll, currentSemester, DoB;  public Student() {  
+}  
+ 
+ 
+Student(String college, String dept, String  name, int roll, int DoB, int currentSemester) {  this.name = name;  this.college = college;  this.dept = dept;  this.roll = roll;  
+this.DoB = DoB;  this.currentSemester = currentSemester; }  
+ 
+public void display() {  
+System.out.println("Student's NAME: " +  name);  
+System.out.println("College NAME: " +  college);  
+System.out.println("Department: " + dept); System.out.println("Roll: " + roll);  
+System.out.println("Date of Birth (Year): " +  DoB);  
+ 
+System.out.println("Current Semester: " +  currentSemester);  
+}  public void age() {  
+System.out.println("Current Age is: " + (2024  - DoB));  
+System.out.println();  
+}  
+ 
+public static void main(String[] args) { Scanner sc = new Scanner(System.in); Student[] students = new Student[2]; for (int i = 0; i < students.length; i++) { students[i] = new Student();  
+}  
+ 
+for (Student x : students) {  
+System.out.print("Enter your name: "); x.name = sc.nextLine();  System.out.print("Enter your University name:  ");  x.college = sc.nextLine();  
+System.out.print("Enter your dept. name: "); 
+ x.dept = sc.nextLine();  
+System.out.print("Enter your roll: ");  x.roll = sc.nextInt();  
+System.out.print("Enter your DoB (Year) 
+ 
+x.DoB = sc.nextInt(); 
+ 
+ 
+System.out.print("Enter your current semester:  ");  x.currentSemester = sc.nextInt();  sc.nextLine();  System.out.println();  
+}  
+ 
+ 
+System.out.println("Showing the details  
+ 
+of the  students: ");  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+import java.util.Scanner; 
+ 
+class Customer { 
+    int id;      int points;      int sales; 
+ 
+    
+    public Customer(int id, int points, int sales) {         this.id = id;         this.points = points;         this.sales = sales; 
+    } 
+ 
+    
+    public void Discount() {         double d; 
+ 
+         
+        if (points > 10) { 
+             
+            double discount = 0.10 * sales;             d = sales - discount; 
+        } else {            d = sales; 
+        } 
+ 
+         
+        System.out.println("Customer ID: " + id); 
+        System.out.println("Points: " + points); 
+        System.out.println("Sales with discount  " + d); 
+    } 
+} 
+ 
+public class labre { 
+    public static void main(String[] args) {         Scanner scanner = new Scanner(System.in); 
+ 
+        
+        System.out.print("Enter ID: ");         int id = scanner.nextInt(); 
+ 
+        System.out.print("Enter points: ");         int points = scanner.nextInt(); 
+ 
+        System.out.print("Enter sales: ");         int sales = scanner.nextInt(); 
+ 
+         
+        Customer customer = new Customer(id, points, sales); 
+ 
+        
+        customer.Discount(); 
+ 
+        scanner.close(); 
+    } 
+} 
